@@ -11,11 +11,10 @@ kanban
     b7[Generate PDF]
 
   todo[To Do]
-    t1[Login]
     t8[Manage User]
 
   inprogress["In Progress (2)"]
-
+     i1["Login (Start: 14/09)"]
 
   review["Review/Testing (1)"]
     
