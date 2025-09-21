@@ -25,14 +25,14 @@
             "id": "77c8036263f9657e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "Kanban/02-Kanban.md",
-                "mode": "source",
-                "source": false
+                "aFile": ".obsidian/plugins/obsidian-git/data.json",
+                "bFile": ".obsidian/plugins/obsidian-git/data.json",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "02-Kanban"
+              "icon": "diff",
+              "title": "Diff: data.json"
             }
           },
           {
@@ -209,8 +209,8 @@
   },
   "active": "77c8036263f9657e",
   "lastOpenFiles": [
-    "Zettelkasten/Untitled.base",
     "Kanban/02-Kanban.md",
+    "Zettelkasten/Untitled.base",
     "Kanban/01-Requirements.md",
     "Reference Notes/Bootstrap.md",
     "Reference Notes/ASP.NET Core MVC.md",
