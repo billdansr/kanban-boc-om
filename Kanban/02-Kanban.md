@@ -3,17 +3,16 @@
 ```mermaid
 kanban
   backlog[Backlog]
-    b1[Login]
     b2[Submit Report]
     b3[Review Report]
     b4[Edit Report]
     b5[Sign Report]
     b6[Review Manhour]
     b7[Generate PDF]
-    b8[Manage User]
 
   todo[To Do]
-
+    t1[Login]
+    t8[Manage User]
 
   inprogress["In Progress (2)"]
 
