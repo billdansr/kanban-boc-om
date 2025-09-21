@@ -16,8 +16,7 @@ kanban
     i8["Manage User (Start: 15/09)"]
 
   review["Review/Testing (1)"]
-    r1[Login]
 
   done[Done]
-
+    d1["Login (End: 15/09)"]
 ```
