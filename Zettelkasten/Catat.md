@@ -40,6 +40,24 @@
 - 19 September
 	- Melanjutkan pengembangan fitur manage user admin
 	- Bikin tabel daftar user
+- 22 September
+	- Mempertimbangkan implementasi table menggunakan MVC-only atau DataTables
+	- Setup DataTables untuk users
+- 23 September
+	- Buat Migration untuk tambah kolom Name, NIP, Job, dan SignaturePath ke tabel AspNetUsers
+	- Berhasil Create User menggunakan form modal
+	- Implementasi Delete User
+	- Mempertimbangkan Ajax atau pure MVC untuk CRUD
+		- \_userForm mungkin gajadi
+		- ManageUsersViewModel mungkin gajadi
+- 24 September
+	- Memindahkan barang megaphone dan speaker ke ruang lain
+	- Berhasil implementasi create user form
+	- Membuat Area Admin
+	- Memilih arsitektur MVC murni dan tidak memakai AJAX
+- 25 September
+	- Belajar \_ViewImports dan \_ViewStart
+	- Selesai implementasi Edit dan Delete User (Manage User)
 
 ```mermaid
 stateDiagram-v2

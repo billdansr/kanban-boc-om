@@ -106,3 +106,25 @@ flowchart TD
 			- Support Area, Operator, Job Description, Documentation ![[02.2.2.B-Alur.png]]
 	3. Man Power Statistic ![[03-Alur.png]]
 	4. Review Report ![[04-Alur.png]]
+
+---
+
+# Baru (22/09)
+
+1. Home ![[Pasted image 20250922091444.png]]
+	1. Report Submission ![[Pasted image 20250922110526.png]]
+		- Select Area of Work: -, TANK BLENDING & METERING, GAS JETTY & EWTP
+		- Select Equipment Category:  -, ROTATING EQUIPMENT, STATIONARY EQUIPMENT, (Instrument jika TBM | Jetty jika EWT), Others
+		- Select Functional Location: -, Tergantung Equipment
+		- Select Report Category: -, Support/Helper, Green Housekeeping
+		- Detailed Location
+		- Select Number of Personel-, 1-n
+		- Report Date: MM/DD/YYYY
+		- Start Time of Work: hh:mm AM | PM
+		- Finish Time of Work: hh:mm AM | PM
+		- Generate Form ![[Pasted image 20250922110843.png]]
+			- Operator n Name
+			- Job Description
+			- Documentation Before Process
+			- Documentation During Process
+			- Documentation After Process

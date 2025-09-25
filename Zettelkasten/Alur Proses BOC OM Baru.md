@@ -36,3 +36,74 @@ user -- generatepdf
 manageuser -- admin
 @enduml
 ```
+
+```mermaid
+erDiagram
+    ASPNETUSERS {
+        string Id PK
+        string UserName
+        string NormalizedUserName
+        string Email
+        string NormalizedEmail
+        bool EmailConfirmed
+        string PasswordHash
+        string SecurityStamp
+        string ConcurrencyStamp
+        string PhoneNumber
+        bool PhoneNumberConfirmed
+        bool TwoFactorEnabled
+        datetime LockoutEnd
+        bool LockoutEnabled
+        int AccessFailedCount
+    }
+
+    ASPNETROLES {
+        string Id PK
+        string Name
+        string NormalizedName
+        string ConcurrencyStamp
+    }
+
+    ASPNETUSERROLES {
+        string UserId PK, FK
+        string RoleId PK, FK
+    }
+
+    ASPNETUSERCLAIMS {
+        int Id PK
+        string UserId FK
+        string ClaimType
+        string ClaimValue
+    }
+
+    ASPNETUSERLOGINS {
+        string LoginProvider PK
+        string ProviderKey PK
+        string ProviderDisplayName
+        string UserId FK
+    }
+
+    ASPNETUSERTOKENS {
+        string UserId PK, FK
+        string LoginProvider PK
+        string Name PK
+        string Value
+    }
+
+    ASPNETROLECLAIMS {
+        int Id PK
+        string RoleId FK
+        string ClaimType
+        string ClaimValue
+    }
+
+    %% Relationships
+    ASPNETUSERS ||--o{ ASPNETUSERROLES : has
+    ASPNETROLES ||--o{ ASPNETUSERROLES : has
+
+    ASPNETUSERS ||--o{ ASPNETUSERCLAIMS : has
+    ASPNETUSERS ||--o{ ASPNETUSERLOGINS : has
+    ASPNETUSERS ||--o{ ASPNETUSERTOKENS : has
+
+    ASPNETROLES ||--o{ ASPNETROLECLAIMS : has
+```

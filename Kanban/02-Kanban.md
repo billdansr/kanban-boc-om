@@ -9,13 +9,13 @@ kanban
     b7[Generate PDF]
 
   todo[To Do]
-      t2[Submit Report]
-      t3[Review Report]
+    t3[Review Report]
 
   inprogress["In Progress (2)"]
-    i8["Manage User (Start: 15/09)"]
+    i2[Submit Report]
 
   review["Review/Testing (1)"]
+    r8["Manage User"]
 
   done[Done]
     d1["Login (End: 15/09)"]
