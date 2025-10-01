@@ -32,6 +32,7 @@ rectangle "BOC OM" {
   (Manage Tank Component) as managetankcomponent
   (Manage Tank Component Configuration) as managetankcomponentconfiguration
   (Manage Report Category) as managereportcategory
+  (Manage Area & Equipment Mappings) as manageareaequipment
   
   generatepdf .> review : <<extend>>
 }
@@ -55,6 +56,7 @@ managetankcomponentgroup -- admin
 managetankcomponent -- admin
 managetankcomponentconfiguration -- admin
 managereportcategory -- admin
+manageareaequipment -- admin
 
 note right of login
   Precondition:
@@ -63,10 +65,10 @@ end note
 @enduml
 ```
 
-| User class | Use cases                                                                                                                                                                                                                                               |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| User       | Login, Submit Report, Edit Report, Sign Report, Review Report, Generate PDF, Review Quality Performance Indicator, Review Monthly Summary                                                                                                               |
-| Admin      | Manage User, Manage Role, Manage Area of Work, Manage Equipment Category, Manage Functional Location, Manage Tank Type, Manage Service, Manage Tank Component Group, Manage Tank Component, Manage Tank Component Configuration, Manage Report Category |
+| User class | Use cases                                                                                                                                                                                                                                                                                 |
+| ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| User       | Login, Submit Report, Edit Report, Sign Report, Review Report, Generate PDF, Review Quality Performance Indicator, Review Monthly Summary                                                                                                                                                 |
+| Admin      | Manage User, Manage Role, Manage Area of Work, Manage Equipment Category, Manage Functional Location, Manage Tank Type, Manage Service, Manage Tank Component Group, Manage Tank Component, Manage Tank Component Configuration, Manage Report Category, Manage Area & Equipment Mappings |
 
 ## User Stories
 
@@ -496,11 +498,11 @@ direction TB
 	    
 	    <<enum>>
 	    
-	    Before
+	    BeforeProcess
 	    
-	    During
+	    DuringProcess
 	    
-	    After
+	    AfterProcess
 	    
     }
 
@@ -633,5 +635,7 @@ direction TB
     Documentation "*" --* "1" Report
     
     Documentation --> DocumentationPeriod
+    
+    Documentation "*" --> "1" TankComponentGroup
 ```
 

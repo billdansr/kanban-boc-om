@@ -23,12 +23,11 @@ kanban
 	  t19[Manage Report Category]
 
   inprogress["In Progress (2)"]
-	  i11["Manage Area of Work (Start: 01/10)"]
 	  i12["Manage Equipment Category (Start: 01/10)"]
-
-  review["Review/Testing (1)"]
+	  i20["Manage Area & Equipment Mappings (Start: 01/10)"]
 
   done[Done]
 	  d1["Login (End: 15/09)"]
+	  d11["Manage Area of Work (End: 01/10)"]
 	  d9["Manage User (End: 25/09)"]
 ```

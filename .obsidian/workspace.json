@@ -121,7 +121,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "845ef3115e2ae831",
@@ -228,8 +229,8 @@
     "Kanban/01-Requirements.md",
     "Kanban/02-Kanban.md",
     "Zettelkasten/Alur Proses BOC OM Lama.md",
-    "Exhaustive Data.md",
     "Zettelkasten/Catat.md",
+    "Exhaustive Data.md",
     "Zettelkasten/ER Diagram.md",
     "gje_RE.md",
     "Zettelkasten/Catatan Harian.md",

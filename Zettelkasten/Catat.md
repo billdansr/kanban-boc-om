@@ -75,7 +75,8 @@
 - 30 September
 	- Membuat CRUD untuk AreaOfWork, EquipmentCategory, dan FunctionalLocation
 	- Ditemukan masalah ketika mencoba mengimplementasikan Report Submission, tidak jelas antara data master dan data transaksi sehingga dilakukan desin database ulang.
-	- 
+- 1 Oktober
+	- Implementasi desain class diagram ke Models dan migrate 
 
 ```mermaid
 stateDiagram-v2
