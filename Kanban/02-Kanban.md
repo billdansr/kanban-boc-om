@@ -13,8 +13,7 @@ kanban
 
   todo[To Do]
 	  t10[Manage Role]
-	  t11[Manage Area of Work]
-	  t12[Manage Equipment Category]
+	  
 	  t13[Manage Functional Location]
 	  t14[Manage Tank Type]
 	  t15[Manage Service]
@@ -24,7 +23,8 @@ kanban
 	  t19[Manage Report Category]
 
   inprogress["In Progress (2)"]
-
+	  i11["Manage Area of Work (Start: 01/10)"]
+	  i12["Manage Equipment Category (Start: 01/10)"]
 
   review["Review/Testing (1)"]
 
