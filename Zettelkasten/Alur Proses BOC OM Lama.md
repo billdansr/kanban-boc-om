@@ -111,7 +111,8 @@ flowchart TD
 
 # Baru (22/09)
 
-1. Home ![[Pasted image 20250922091444.png]]
+0. Login ![[Pasted image 20250925104436.png]]
+1. Home ![[Pasted image 20250922091444.png]] (25/09)![[Pasted image 20250925104501.png]] 
 	1. Report Submission ![[Pasted image 20250922110526.png]]
 		- Select Area of Work: -, TANK BLENDING & METERING, GAS JETTY & EWTP
 		- Select Equipment Category:  -, ROTATING EQUIPMENT, STATIONARY EQUIPMENT, (Instrument jika TBM | Jetty jika EWT), Others
@@ -128,3 +129,58 @@ flowchart TD
 			- Documentation Before Process
 			- Documentation During Process
 			- Documentation After Process
+	2. Monthly Summary ![[Pasted image 20250925104708.png]]
+		- TANK FUNCTIONAL LOCATION: ...
+		- Report Periode: {MONTH YEAR} ![[Pasted image 20250925104853.png]]
+	3. Search Report ![[Pasted image 20250925105446.png]]
+		- Report Date: MM/DD/YYYY
+		- Sign MUST BE ELIGIBLE
+		- Edit MUST BE NOT PROHIBITED
+		- Review ![[Pasted image 20250925105645.png]] ![[Pasted image 20250925105659.png]]
+ 
+	4. QPI ![[Pasted image 20250925105332.png]] ![[Pasted image 20250925105407.png]]
+		- Select Statistic Periode: -, All Periode, Monthly
+
+# Activity Diagram
+
+## Tank Blending & Metering
+
+```mermaid
+flowchart TD
+	Start([START]) --> AreaOfWork{Area of Work}
+	
+	AreaOfWork -- TBM --> TBM[Tank Blending & Metering]
+	AreaOfWork -- GJE --> GJE[Gas Jetty & EWTP]
+	
+	TBM --> EquipmentCategory{Select Equipment Category}
+	
+	EquipmentCategory --> RotatingEquipment[Rotating Equipment]
+	EquipmentCategory --> StationaryEquipment[Stationary Equipment]
+	EquipmentCategory --> Instrument
+	EquipmentCategory --> Others
+	
+	RotatingEquipment --> FunctionalLocation[Select Functional Location]
+	
+	FunctionalLocation --> P["42-P-..."]
+	
+	P --> ReportCategory{Select Report Category}
+	
+	ReportCategory --> Support["Support/Helper"]
+	ReportCategory --> GHK[Green Housekeeping]
+	
+	Support --> DetailedLocation[Input Detailed Location]
+	DetailedLocation --> NumberOfPersonel[Select Number of Personel]
+	
+	DetailedLocation --> ReportDate[Select Report Date]
+	ReportDate --> StartTime[Start Time of Work]
+	StartTime --> FinishTime[Finish Time of Work]
+	FinishTime --> GenerateForm[Generate Form]
+```
+
+|                            | Tank Type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |                                                                                                                                                                                                                                                                                                                                                               |
+| -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|                            | Floating Roof                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | Fixed Roof                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Spherical                                                                                                                                                                                                                                                                                                                                                     |
+| Main Tank Component        | Visual Plate Status<br>Manhole (all) Status<br>Drain Tank Status<br>Drain Inspection Pit Status<br>Inlet Pipe Status<br>Outlet Pipe Status<br>Expansion Joint (all) Status<br>Lowerpoint Status<br>Manual Valve at Inlet Status<br>Manual Valve at Outlet Status<br>Motorized Valve at Inlet Status<br>Motorized Valve at Outlet Status<br>Pressure Safety Valve Status<br>Grounding (cable and rod) Status<br>Bounding Cable Status<br>Tank Stairs Status<br>Samplinghole Status<br>Roof Stairs Status<br>Roof Deck Status<br>Roof Drain Status<br>Seal Roof Status<br>Breather Valve Status | Visual Plate Status<br>Manhole (all) Status<br>Drain Tank Status<br>Drain Inspection Pit Status<br>Inlet Pipe Status<br>Outlet Pipe Status<br>Expansion Joint (all) Status<br>Lowerpoint Status<br>Manual Valve at Inlet Status<br>Manual Valve at Outlet Status<br>Motorized Valve at Inlet Status<br>Motorized Valve at Outlet Status<br>Pressure Safety Valve Status<br>Grounding (cable and rod) Status<br>Bounding Cable Status<br>Tank Stairs Status<br>Sampling hole Status<br>Roof Stats<br>Breather Valve Status | Visual Plate Status<br>Manhole (all) Status<br>Inlet Pipe Status<br>Outlet Pipe Status<br>Lowerpoint Status<br>Manual Valve at Inlet Status<br>Manual Valve at Outlet Status<br>Solenoid Valve at outlet Status<br>Pressure Safety Valve Status<br>Grounding (cable and rod) Status<br>Bounding Cable Status<br>Tank Stairs Status<br>Leg Fireproofing Status |
+| Tank Accessories Component | Mixer (if any) Status<br>Lighting (all) Status<br>Blanket Gas (if any) status<br>Steam Heater (if any) Status<br>Line Condensate (if any) Status<br>Lightning Protection System Status<br>Bundwal Integrity Status<br>Bundwal Pit Status<br>Tank Pit Status                                                                                                                                                                                                                                                                                                                                   | Mixer (if any) Status<br>Lighting (all) Status<br>Blanket Gas (if any) status<br>Steam Heater (if any) Status<br>Line Condensate (if any) Status<br>Lightning Protection System Status<br>Bundwal Integrity Status<br>Bundwal Pit Status<br>Tank Pit Status                                                                                                                                                                                                                                                               | Lighting (all) Status<br>Vapour Line (if any) status<br>Valve at Vapor Line (manual/XV) Status<br>Flare Line (if any) Status<br>Valve at flare Line (manual/XV) Status                                                                                                                                                                                        |
+| Tank Metering Component    | Temperature Gauge Status<br>Temperature Gauge Readings (°C)<br>Level Meter Status<br>Manual Level Readings (mm)<br>ATG Status<br>ATG Temperature Readings (°C)<br>ATG Level Readings (mm)                                                                                                                                                                                                                                                                                                                                                                                                     | Temperature Gauge Status<br>Temperature Gauge Readings (°C)<br>Level Meter Status<br>Manual Level Readings (mm)<br>ATG Status<br>ATG Temperature Readings (°C)<br>ATG Level Readings (mm)                                                                                                                                                                                                                                                                                                                                 | Pressure Indicator Status<br>Pressure Readings (kgf/cm2)<br>Temperature Gauge Status<br>Temperature Gauge Readings (°C)<br>Level Meter Status<br>Manual Level Readings (mm)<br>ATG Status<br>ATG Temperature Readings (°C)<br>ATG Level Readings (mm)                                                                                                         |
+

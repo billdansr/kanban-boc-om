@@ -58,6 +58,24 @@
 - 25 September
 	- Belajar \_ViewImports dan \_ViewStart
 	- Selesai implementasi Edit dan Delete User (Manage User)
+- 26 September
+	- Hitung stok catridge
+	- Analisis alur proses BOC OM
+	- Desain Class Diagram
+	- Memilih Code-First Approach
+- 28 September
+	- Mempelajari bahwa desain Model di MVC harus memperhatikan multiplicity dan relationship (apakah suatu class bisa di-instantiate tanpa class lain atau ketergantungan?)
+	- Desain dan Implementasi Models
+	- Konfigurasi DbContext
+	- Migration dengan skema terbaru
+- 29 September
+	- SeedData untuk Core Application Data
+	- Update schema database dan add migration
+	- Membuat form untuk generate form
+- 30 September
+	- Membuat CRUD untuk AreaOfWork, EquipmentCategory, dan FunctionalLocation
+	- Ditemukan masalah ketika mencoba mengimplementasikan Report Submission, tidak jelas antara data master dan data transaksi sehingga dilakukan desin database ulang.
+	- 
 
 ```mermaid
 stateDiagram-v2
@@ -88,4 +106,32 @@ stateDiagram-v2
 
     state "Lawyer" as law
     state "John" as law
+```
+
+```mermaid
+graph TD
+    A[Senior Vice President Refining Operation] --> B[General Manager RU VI]
+    B --> C[Secretary]
+    B --> D[Senior Manager Operation & Manufacturing]
+    D --> E[Production I Manager]
+    D --> F[Production II Manager]
+    D --> G[Refinery Planning & Optimization Manager]
+    D --> H[Maintenance Execution Manager]
+    D --> I[Maintenance Planning & Support Manager]
+    D --> J[Engineering Manager]
+    D --> K[HSE Manager]
+    D --> L[Finance Manager]
+    D --> M[Procurement Manager]
+    D --> N[IT Manager]
+    D --> O[Reliability Manager]
+    D --> P[Legal Counsel/Compliance]
+    
+    E --> E1[RCC]
+    E --> E2[HSC]
+    E --> E3[DHC]
+    
+    F --> F1[OM]
+    F --> F2[Utilities]
+    F --> F3[Laboratory]
+    F --> F4[POC]
 ```

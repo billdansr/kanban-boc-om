@@ -8,3 +8,10 @@
 	- Desain Use Case Diagram
 - 12 September
 	- Tampilan dulu dari BOC OM sebelum data
+
+900 jam
+
+Jam kerja harian = 07.00 s.d. 16.00 = 8 jam
+Hari kerja per pekan = 7 hari - 2 hari libur = 5 hari kerja
+Total hari non libur = 45 hari
+Total = 45 x 8 = 360 jam

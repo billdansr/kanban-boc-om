@@ -1,0 +1,72 @@
+[
+    "-",
+    "63-T-110",
+    "42-T-401A",
+    "42-T-401B",
+    "42-T-402A",
+    "42-T-402B",
+    "42-T-403A",
+    "42-T-403B",
+    "42-T-403C",
+    "42-T-403D",
+    "42-T-404A",
+    "42-T-404B",
+    "42-T-404C",
+    "42-T-404D",
+    "42-T-404E",
+    "42-T-404F",
+    "42-T-404G",
+    "42-T-404H",
+    "63-Z-403",
+    "63-Z-304",
+    "63-Z-305AB",
+    "63-Z-311",
+    "63-Z-401",
+    "63-Z-315",
+    "63-Z-306",
+    "63-Z-201",
+    "63-Z-202AB",
+    "63-Z-203",
+    "63-Z-301",
+    "63-Z-302",
+    "63-Z-303",
+    "63-Z-312",
+    "63-Z-402",
+    "63-Z-501"
+]
+
+Func. Location,Tank Type,Service
+
+63-T-110,FIXED ROOF,HS-SLOP
+
+42-T-401A,SPHERICAL,PP-PROPANE
+
+42-T-401B,SPHERICAL,PP-PROPANE
+
+42-T-402A,SPHERICAL,BN-BUTANE
+
+42-T-402B,SPHERICAL,BN-BUTANE
+
+42-T-403A,SPHERICAL,PG-LPG MIXED, BULK
+
+42-T-403B,SPHERICAL,
+
+42-T-403C,SPHERICAL,
+
+42-T-403D,SPHERICAL,
+
+42-T-404A,SPHERICAL,
+
+42-T-404B,SPHERICAL,
+
+42-T-404C,SPHERICAL,
+
+42-T-404D,SPHERICAL,
+
+42-T-404E,SPHERICAL,
+
+42-T-404F,SPHERICAL,
+
+42-T-404G,SPHERICAL,
+
+42-T-404H,SPHERICAL,
