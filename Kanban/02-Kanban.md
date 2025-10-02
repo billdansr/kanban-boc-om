@@ -18,7 +18,6 @@ kanban
 	  t19[Manage Report Category]
 
   inprogress["In Progress (2)"]
-	  i16["Manage Tank Component Group (Start: 02/10)"]
 	  i17["Manage Tank Component (Start: 02/10)"]
 
   done[Done]
@@ -29,5 +28,6 @@ kanban
 	  d13["Manage Functional Location (End: 02/10)"]
 	  d14["Manage Tank Type (End: 02/10)"]
 	  d15["Manage Service (End: 02/10)"]
+	  d16["Manage Tank Component Group (End: 02/10)"]
 	  d20["Manage Area & Equipment Mappings (End: 01/10)"]
 ```
