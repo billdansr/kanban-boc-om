@@ -77,6 +77,8 @@
 	- Ditemukan masalah ketika mencoba mengimplementasikan Report Submission, tidak jelas antara data master dan data transaksi sehingga dilakukan desin database ulang.
 - 1 Oktober
 	- Implementasi desain class diagram ke Models dan migrate 
+- 2 Oktober
+	- Bantu turunin barang untuk keperluan printing dari rak atas gudang
 
 ```mermaid
 stateDiagram-v2

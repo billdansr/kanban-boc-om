@@ -14,11 +14,10 @@ kanban
   todo[To Do]
 	  t10[Manage Role]
 	  
-	  t19[Manage Report Category]
-
   inprogress["In Progress (2)"]
-	  i17["Manage Tank Component (Start: 02/10)"]
 	  t18["Manage Tank Component Configuration (Start: 02/10)"]
+	  t19["Manage Report Category (Start: 02/10)"]
+	  
 
   done[Done]
 	  d1["Login (End: 15/09)"]
@@ -29,5 +28,6 @@ kanban
 	  d14["Manage Tank Type (End: 02/10)"]
 	  d15["Manage Service (End: 02/10)"]
 	  d16["Manage Tank Component Group (End: 02/10)"]
+	  d17["Manage Tank Component (End: 02/10)"]
 	  d20["Manage Area & Equipment Mappings (End: 01/10)"]
 ```
