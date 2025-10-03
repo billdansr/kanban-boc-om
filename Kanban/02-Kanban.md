@@ -29,5 +29,4 @@ kanban
 	  d15["Manage Service (End: 02/10)"]
 	  d16["Manage Tank Component Group (End: 02/10)"]
 	  d17["Manage Tank Component (End: 02/10)"]
-	  d20["Manage Area & Equipment Mappings (End: 01/10)"]
 ```

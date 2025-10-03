@@ -72,6 +72,9 @@
 	- SeedData untuk Core Application Data
 	- Update schema database dan add migration
 	- Membuat form untuk generate form
+	- Mulai mengerjakan use case submit report
+	- Ubah schema agar tidak redundan
+	- Membuat form report submission untuk generate form
 - 30 September
 	- Membuat CRUD untuk AreaOfWork, EquipmentCategory, dan FunctionalLocation
 	- Ditemukan masalah ketika mencoba mengimplementasikan Report Submission, tidak jelas antara data master dan data transaksi sehingga dilakukan desin database ulang.
@@ -79,6 +82,8 @@
 	- Implementasi desain class diagram ke Models dan migrate 
 - 2 Oktober
 	- Bantu turunin barang untuk keperluan printing dari rak atas gudang
+	- Refactor data model untuk meningkatkan maintainability
+	- Bantu angkat barang dari lantai bawah ke atas
 
 ```mermaid
 stateDiagram-v2
