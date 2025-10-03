@@ -15,7 +15,6 @@ kanban
 	  t10[Manage Role]
 	  
   inprogress["In Progress (2)"]
-	  t18["Manage Tank Component Configuration (Start: 02/10)"]
 	  t19["Manage Report Category (Start: 02/10)"]
 	  
 
@@ -29,4 +28,5 @@ kanban
 	  d15["Manage Service (End: 02/10)"]
 	  d16["Manage Tank Component Group (End: 02/10)"]
 	  d17["Manage Tank Component (End: 02/10)"]
+	  d18["Manage Tank Component Configuration (End: 03/10)"]
 ```
