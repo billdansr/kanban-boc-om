@@ -3,19 +3,19 @@
 ```mermaid
 kanban
   backlog[Backlog]
-	  b2[Submit Report]
-	  b3[Review Report]
-	  b4[Edit Report]
-	  b5[Sign Report]
-	  b6[Generate PDF]
-	  b7[Review QPI]
-	  b8[Review Summary]
 
   todo[To Do]
-	  t10[Manage Role]
+	  t2[Submit Report]
+	  t3[Review Report]
+	  t4[Edit Report]
+	  t5[Sign Report]
+	  t6[Generate PDF]
+	  t7[Review QPI]
+	  t8[Review Summary]
 	  
   inprogress["In Progress (2)"]
-	  t19["Manage Report Category (Start: 02/10)"]
+	  i10["Manage Role (Start: 03/10)"]
+	  i19["Manage Report Category (Start: 02/10)"]
 	  
 
   done[Done]
