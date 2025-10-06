@@ -32,7 +32,6 @@ rectangle "BOC OM" {
   (Manage Tank Component) as managetankcomponent
   (Manage Tank Component Configuration) as managetankcomponentconfiguration
   (Manage Report Category) as managereportcategory
-  (Manage Area & Equipment Mappings) as manageareaequipment
   
   generatepdf .> review : <<extend>>
 }
@@ -56,7 +55,6 @@ managetankcomponentgroup -- admin
 managetankcomponent -- admin
 managetankcomponentconfiguration -- admin
 managereportcategory -- admin
-manageareaequipment -- admin
 
 note right of login
   Precondition:
@@ -65,10 +63,10 @@ end note
 @enduml
 ```
 
-| User class | Use cases                                                                                                                                                                                                                                                                                 |
-| ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| User       | Login, Submit Report, Edit Report, Sign Report, Review Report, Generate PDF, Review Quality Performance Indicator, Review Monthly Summary                                                                                                                                                 |
-| Admin      | Manage User, Manage Role, Manage Area of Work, Manage Equipment Category, Manage Functional Location, Manage Tank Type, Manage Service, Manage Tank Component Group, Manage Tank Component, Manage Tank Component Configuration, Manage Report Category, Manage Area & Equipment Mappings |
+| User class | Use cases                                                                                                                                                                                                                                               |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| User       | Login, Submit Report, Edit Report, Sign Report, Review Report, Generate PDF, Review Quality Performance Indicator, Review Monthly Summary                                                                                                               |
+| Admin      | Manage User, Manage Role, Manage Area of Work, Manage Equipment Category, Manage Functional Location, Manage Tank Type, Manage Service, Manage Tank Component Group, Manage Tank Component, Manage Tank Component Configuration, Manage Report Category |
 
 ## User Stories
 
@@ -77,48 +75,6 @@ end note
 
 - Login valid → masuk home page
 - Login invalid → error message
-
-## ERD
-
-```mermaid
----
-title: BOC OM (ERD Crow's Foot)
----
-erDiagram
-
-IdentityUser ||--o{ ApplicationUser : inherits
-
-AreaOfWork ||--o{ AreaEquipmentCategory : contains
-EquipmentCategory ||--o{ AreaEquipmentCategory : contains
-FunctionalLocation }o--|| TankType : "has"
-FunctionalLocation }o--|| Service : "has"
-FunctionalLocation }o--|| AreaEquipmentCategory : "belongs to"
-
-Report ||--|| ReportCategory : "categorized as"
-Report ||--|| FunctionalLocation : "at"
-
-ApplicationUser ||--o{ UserReport : "assigned"
-Report ||--o{ UserReport : "involves"
-UserReport }o--|| UserType : "with role"
-
-TankType ||--o{ TankComponentConfiguration : "configured with"
-TankComponentGroup ||--o{ TankComponentConfiguration : "contains"
-TankComponent ||--o{ TankComponentConfiguration : "part of"
-
-Report ||--o{ TankComponentGroupRecord : "documents"
-TankComponentGroup ||--o{ TankComponentGroupRecord : "instance of"
-
-TankComponentGroupRecord ||--o{ TankComponentRecord : "has"
-TankComponent ||--o{ TankComponentRecord : "inspected as"
-TankComponentRecord }o--|| TankComponentStatus : "with status"
-
-TankComponentRecord ||--o{ TankComponentReading : "produces"
-
-Report ||--o{ Documentation : "includes"
-TankComponentGroup ||--o{ Documentation : "related to"
-Documentation }o--|| DocumentationPeriod : "tagged as"
-
-```
 
 ## Class Diagram
 
@@ -328,22 +284,6 @@ classDiagram
 ```
 
 New
-
-42-T-101G -- Floating Roof
-42-T-101A -- Floating Roof
-42-T-402B -- Spherical
-
-Floating Roof -- Main Tank
-Floating Roof -- Tank Accessories
-Floating Roof -- Tank Metering
-Spherical -- Main Tank
-Spherical -- Tank Accessories
-Spherical -- Tank Metering
-
-Visual Plate -- (Floating Roof -- Main Tank)
-Manhole -- (Floating Roof -- Main Tank)
-Visual Plate -- (Spherical -- Main Tank)
-Manhole -- (Spherical -- Main Tank)
 
 ```mermaid
 ---
@@ -640,7 +580,7 @@ direction TB
 ```
 
 
-minor
+minor fix
 ```mermaid
 ---
 

@@ -22,7 +22,7 @@
             }
           },
           {
-            "id": "77c8036263f9657e",
+            "id": "87546f962bcbecc8",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -33,34 +33,6 @@
               },
               "icon": "lucide-file",
               "title": "02-Kanban"
-            }
-          },
-          {
-            "id": "87546f962bcbecc8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Zettelkasten/Catat.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Catat"
-            }
-          },
-          {
-            "id": "ec85d5d2a516f335",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Zettelkasten/Alur Proses BOC OM Lama.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Alur Proses BOC OM Lama"
             }
           }
         ],
@@ -121,7 +93,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "845ef3115e2ae831",
@@ -223,13 +196,19 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "77c8036263f9657e",
+  "active": "8f7dab47a6d06e36",
   "lastOpenFiles": [
+    "Zettelkasten/Laporan.md",
     "Kanban/01-Requirements.md",
-    "Zettelkasten/Catat.md",
     "Kanban/02-Kanban.md",
-    "Reference Notes/ASP.NET Core MVC.md",
+    "Files/Lead Time Run.png",
+    "Files/CFD.png",
+    "Kanban/04-Reviews/03-10-2025.md",
+    "Kanban/05-PMP.md",
+    "Zettelkasten/Catat.md",
     "Zettelkasten/Alur Proses BOC OM Lama.md",
+    "Files/Lead Time Distribution.png",
+    "Reference Notes/ASP.NET Core MVC.md",
     "gje_SE.md",
     "tbm_RE.md",
     "tbm_SE.md",
@@ -249,22 +228,14 @@
     "Files/Pasted image 20250925105407.png",
     "Files/Pasted image 20250925105332.png",
     "Files/Pasted image 20250925104853.png",
-    "Files/Pasted image 20250925104708.png",
-    "Files/Pasted image 20250925104501.png",
-    "Files/Pasted image 20250925104436.png",
-    "Files/Pasted image 20250922110843.png",
     "Zettelkasten/Untitled.base",
     "Zettelkasten/Software Design Description.md",
     "Project/01 - Software Requirements Specification.md",
     "Project/04 - Test Document.md",
     "Project/03 - Implementation Document.md",
     "Project/02 - Architecture Design Document.md",
-    "Kanban/04-Reviews/Weekly-Review-2025-09-21.md",
-    "Kanban/04-Reviews/Retrospective-2025-09-21.md",
     "Kanban/04-Reviews",
     "Kanban",
-    "Project/06 - Configuration Management Document.md",
-    "Project/05 - Quality Assurance Document.md",
     "Kanban",
     "Project",
     "Zettelkasten",
