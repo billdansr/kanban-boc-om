@@ -3,6 +3,7 @@
 ```mermaid
 kanban
   backlog[Backlog]
+	  uc20[Manage Tank Component Reading]@{priority: 'Low'}
 
   todo[To Do]
 	  uc03[Review Report]@{priority: 'High'}
@@ -13,7 +14,7 @@ kanban
 	  uc08[Review Summary]@{priority: 'High'}
 	  
   inprogress["In Progress (2)"]
-	  uc02["Submit Report(Start: 06/10)"]@{priority: 'High'}
+	  uc02["Submit Report (Start: 06/10)"]@{priority: 'High'}
 
   done[Done]
 	  uc01["Login (End: 15/09)"]@{priority: 'High'}

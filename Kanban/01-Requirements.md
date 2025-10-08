@@ -32,6 +32,7 @@ rectangle "BOC OM" {
   (Manage Tank Component) as managetankcomponent
   (Manage Tank Component Configuration) as managetankcomponentconfiguration
   (Manage Report Category) as managereportcategory
+  (Manage Tank Component Reading) as managetankcomponentreading
   
   generatepdf .> review : <<extend>>
 }
@@ -55,6 +56,7 @@ managetankcomponentgroup -- admin
 managetankcomponent -- admin
 managetankcomponentconfiguration -- admin
 managereportcategory -- admin
+managetankcomponentreading -- admin
 
 note right of login
   Precondition:
@@ -63,10 +65,10 @@ end note
 @enduml
 ```
 
-| User class | Use cases                                                                                                                                                                                                                                               |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| User       | Login, Submit Report, Edit Report, Sign Report, Review Report, Generate PDF, Review Quality Performance Indicator, Review Monthly Summary                                                                                                               |
-| Admin      | Manage User, Manage Role, Manage Area of Work, Manage Equipment Category, Manage Functional Location, Manage Tank Type, Manage Service, Manage Tank Component Group, Manage Tank Component, Manage Tank Component Configuration, Manage Report Category |
+| User class | Use cases                                                                                                                                                                                                                                                                              |
+| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| User       | Login, Submit Report, Edit Report, Sign Report, Review Report, Generate PDF, Review Quality Performance Indicator, Review Monthly Summary                                                                                                                                              |
+| Admin      | Manage User, Manage Role, Manage Area of Work, Manage Equipment Category, Manage Functional Location, Manage Tank Type, Manage Service, Manage Tank Component Group, Manage Tank Component, Manage Tank Component Configuration, Manage Report Category, Manage Tank Component Reading |
 
 ## User Stories
 
@@ -580,7 +582,7 @@ direction TB
 ```
 
 
-minor fix
+	minor fix
 ```mermaid
 ---
 
@@ -634,9 +636,9 @@ direction TB
 
         +string Name
         
-        +int AreaOfWorkId
+        +int? AreaOfWorkId
         
-        +int EquipmentCategoryId
+        +int? EquipmentCategoryId
 
         +int? TankTypeId
 
@@ -866,3 +868,183 @@ direction TB
 ```
 
 Ketika generate form, perlu mengetahui: TankType untuk generate component group yang dalam tiap component group memiliki component masing-masing
+
+minor fix: reading
+```mermaid
+---
+title: BOC OM
+---
+
+classDiagram
+direction TB
+    class IdentityUser {
+        +string Id
+        ...
+    }
+
+    class ApplicationUser {
+        +string? Name
+        +string? NIP
+        +string? Job
+        +string? SignatureImagePath
+    }
+
+    class AreaOfWork {
+        +int Id
+        +string Name
+    }
+
+    class EquipmentCategory {
+        +int Id
+        +string Name
+    }
+
+    class FunctionalLocation {
+        +int Id
+        +string Name
+        +int? AreaOfWorkId
+        +int? EquipmentCategoryId
+        +int? TankTypeId
+        +int? ServiceId
+    }
+
+    class TankType {
+        +int Id
+        +string Name
+    }
+
+    class Service {
+        +int Id
+        +string Name
+    }
+
+    class ReportCategory {
+        +int Id
+        +string Name
+    }
+
+    class Report {
+        +int Id
+        +DateTime ReportDate
+        +TimeSpan StartTimeOfWork
+        +TimeSpan FinishTimeOfWork
+        +string? DetailedLocation
+        +string? JobDescription
+        +int ReportCategoryId
+        +int FunctionalLocationId
+    }
+
+    class TankComponentGroup {
+        +int Id
+        +string Name
+    }
+
+    class TankComponent {
+        +int Id
+        +string Name
+    }
+    
+    class TankComponentReading {
+        +int Id
+		+string? Name
+        +string Unit
+    }
+
+    class TankComponentStatus {
+        Normal
+        Minor
+        Major
+        Failure
+        NA
+    }
+    
+    class Documentation {
+	    +int Id
+	    +string FilePath
+	    +DocumentationPeriod? Period
+	    +int ReportId
+	    +int? TankComponentGroupRecordId
+    }
+    
+    class DocumentationPeriod {
+	    <<enum>>
+	    BeforeProcess
+	    DuringProcess
+	    AfterProcess
+    }
+
+    class UserReport {
+	    +int Id
+		+UserType UserType
+        +int ReportId
+        +string ApplicationUserId
+    }
+
+    class UserType {
+        Submitter
+        Signatory
+        Personnel
+    }
+
+    class TankComponentConfiguration {
+        +int TankComponentId
+        +int TankTypeId
+        +int TankComponentGroupId
+    }
+    
+    class TankComponentGroupRecord {
+	    +int Id
+	    +string Remarks
+	    +int ReportId
+	    +int TankComponentGroupId
+    }
+
+    class TankComponentRecord {
+		+int Id
+		+TankComponentStatus Status
+        +int TankComponentGroupRecordId
+        +int TankComponentId
+    }
+    
+    class TankComponentReadingRecord {
+	    +int Id
+        +double Value
+	    +int TankComponentRecordId
+	    +int TankComponentReadingId
+    }
+
+    <<enum>> TankComponentStatus
+    <<enum>> UserType
+    
+    IdentityUser <|-- ApplicationUser
+    
+    FunctionalLocation "*" --> "1" AreaOfWork
+    FunctionalLocation "*" --> "1" EquipmentCategory
+    FunctionalLocation "*" --> "1" TankType
+    FunctionalLocation "*" --> "1" Service
+
+    UserReport "*" --* "1" ApplicationUser
+    UserReport "*" --* "1" Report
+    UserReport --> UserType
+
+    Report "*" --* "1" ReportCategory
+    Report "*" --* "1" FunctionalLocation
+
+    TankComponentConfiguration "*" --* "1" TankType
+    TankComponentConfiguration "*" --* "1" TankComponentGroup
+    TankComponentConfiguration "*" --* "1" TankComponent
+    
+    TankComponentGroupRecord "*" --* "1" Report
+    TankComponentGroupRecord "*" --* "1" TankComponentGroup
+
+    TankComponentRecord "*" --* "1" TankComponentGroupRecord
+    TankComponentRecord "*" --* "1" TankComponent
+    TankComponentRecord --> TankComponentStatus
+    
+    TankComponentReadingRecord "*" --* "1" TankComponentRecord
+    TankComponentReadingRecord "*" --* "1" TankComponentReading
+    
+    Documentation "*" --* "1" Report
+    Documentation --> DocumentationPeriod
+    Documentation "*" --> "1" TankComponentGroupRecord
+```
