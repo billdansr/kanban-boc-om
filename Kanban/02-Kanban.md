@@ -11,11 +11,12 @@ kanban
 	  uc06[Generate PDF]@{priority: 'High'}
 	  uc07[Review QPI]@{priority: 'High'}
 	  uc08[Review Summary]@{priority: 'High'}
-	  uc20[Manage Tank Component Reading]@{priority: 'Low'}
 	  
 	  
   inprogress["In Progress (2)"]
 	  uc02["Submit Report (Start: 06/10)"]@{priority: 'High'}
+	  uc20["Manage Tank Component Reading (Start: 08/10)"]@{priority: 'Low'}
+	  
 
   done[Done]
 	  uc01["Login (End: 15/09)"]@{priority: 'High'}
