@@ -15,7 +15,6 @@ kanban
 	  
   inprogress["In Progress (2)"]
 	  uc02["Submit Report (Start: 06/10)"]@{priority: 'High'}
-	  uc20["Manage Tank Component Reading (Start: 08/10)"]@{priority: 'Low'}
 	  
 
   done[Done]
@@ -31,4 +30,6 @@ kanban
 	  uc17["Manage Tank Component (End: 02/10)"]@{priority: 'High'}
 	  uc18["Manage Tank Component Configuration (End: 03/10)"]@{priority: 'High'}
 	  uc19["Manage Report Category (End: 06/10)"]@{priority: 'High'}
+	  uc20["Manage Tank Component Reading (End: 08/10)"]@{priority: 'Low'}
+	  
 ```
