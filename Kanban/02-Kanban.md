@@ -10,13 +10,13 @@ kanban
 	  uc07[Review QPI]@{priority: 'High'}
 	  uc08[Review Summary]@{priority: 'High'}
 	  
-  inprogress["In Progress (2)"]
-	  uc03["Review Report (Start: 13/10)"]@{priority: 'High'}	
-	  uc06["Generate PDF (Start: 13/10)"]@{priority: 'High'}  
+  inprogress["In Progress (2)"] 
 
   done[Done]
 	  uc01["Login (End: 15/09)"]@{priority: 'High'}
-	  uc02["Submit Report (End: 13/10)"]@{priority: 'High'}	  
+	  uc02["Submit Report (End: 13/10)"]@{priority: 'High'}
+	  uc03["Review Report (End: 16/10)"]@{priority: 'High'}	
+	  uc06["Generate PDF (End: 16/10)"]@{priority: 'High'} 	  
 	  uc09["Manage User (End: 25/09)"]@{priority: 'Low'}
 	  uc10["Manage Role (End: 06/10)"]@{priority: 'Low'}
 	  uc11["Manage Area of Work (End: 01/10)"]@{priority: 'High'}
