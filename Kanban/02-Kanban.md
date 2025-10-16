@@ -7,12 +7,12 @@ kanban
   todo[To Do]
 	  uc04[Edit Report]@{priority: 'Low'}
 	  uc05[Sign Report]@{priority: 'Low'}
-	  uc06[Generate PDF]@{priority: 'High'}
 	  uc07[Review QPI]@{priority: 'High'}
 	  uc08[Review Summary]@{priority: 'High'}
 	  
   inprogress["In Progress (2)"]
-	  uc03["Review Report (Start: 13/10)"]@{priority: 'High'}	  
+	  uc03["Review Report (Start: 13/10)"]@{priority: 'High'}	
+	  uc06["Generate PDF (Start: 13/10)"]@{priority: 'High'}  
 
   done[Done]
 	  uc01["Login (End: 15/09)"]@{priority: 'High'}

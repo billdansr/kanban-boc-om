@@ -100,6 +100,13 @@
 		- Menyelesaikan Submission Report Category non-"Tank Daily Check"
 - 10 Oktober
 	- Seed TankComponent's Readings
+	- Bekerja itu harus proper/prudent, apa alasan melakukan sesuatu apakah mengikuti pedoman/SOP. Bekerja sesuai tupoksi dan kewenangan
+	- SS IT -> Enterprise IT
+		- SS IT yang tadinya membawahi RU dan MOR kembali ke EIT di VP Security
+- 15 Oktober
+	- Layouting print report (generate pdf)
+- 16 Oktober
+	- Selesai Review Report
 
 ```mermaid
 stateDiagram-v2
