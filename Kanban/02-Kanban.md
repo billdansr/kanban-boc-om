@@ -6,11 +6,11 @@ kanban
 
   todo[To Do]
 	  uc04[Edit Report]@{priority: 'Low'}
-	  uc05[Sign Report]@{priority: 'Low'}
 	  uc07[Review QPI]@{priority: 'High'}
 	  uc08[Review Summary]@{priority: 'High'}
 	  
   inprogress["In Progress (2)"] 
+	  uc05["Sign Report (Start: 16/10)"]@{priority: 'Low'}
 
   done[Done]
 	  uc01["Login (End: 15/09)"]@{priority: 'High'}
